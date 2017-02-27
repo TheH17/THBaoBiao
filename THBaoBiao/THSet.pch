@@ -1,0 +1,55 @@
+//
+//  THSet.pch
+//  THBaoBiao
+//
+//  Created by 李浩鹏 on 16/9/12.
+//  Copyright © 2016年 李浩鹏. All rights reserved.
+//
+
+#ifndef THSet_pch
+#define THSet_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import "UIView+THFrame.h"
+#import "UIImage+THImage.h"
+
+#define THExpiresDay 3
+
+#define THInfoPageCount 20
+
+#define THKeyWindow [UIApplication sharedApplication].keyWindow
+
+#define THLoginUrl @"http://120.25.162.238:8080/baobiaoshiro/login"
+
+#define THSignUpUrl @"http://120.25.162.238:8080/baobiaoshiro/signup"
+
+#define THFindPassUrl @"http://120.25.162.238:8080/baobiaoshiro/forgetPassword"
+
+#define THCheckCodeUrl @"http://120.25.162.238:8080/baobiaoshiro/verification"
+
+#define THLogoutUrl @"http://120.25.162.238:8080/baobiaoshiro/logout"
+
+#define THChangePassUrl @"http://120.25.162.238:8080/baobiaoshiro/changePassword"
+
+#define THAppShareUrl @"http://www.woyaobid.com/product/2062.html"
+
+#define THAppHelpPhone @"888-88-88"
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define THLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define THLog(...)
+
+#endif
+
+#endif
+
+#endif /* THSet_pch */
